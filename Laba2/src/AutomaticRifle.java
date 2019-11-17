@@ -20,6 +20,15 @@ public class AutomaticRifle extends Weapon {
 	 * тип стрельбы этого автомата
 	 */
 	ShotType shotType;
+	
+	public AutomaticRifle(int max_ammo, int max_dirt, String ammo_type) {
+		super(max_ammo, max_dirt, ammo_type);
+		this.shotType=ShotType.ONE;
+	}
+
+	public void changeShotType(ShotType type) {
+		this.shotType=type;
+	}
 
 	/**
 	 * Выстрел

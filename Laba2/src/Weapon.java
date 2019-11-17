@@ -6,10 +6,15 @@
  */
 public class Weapon {
 
-	/**
-	 * Скорострелность
-	 */
-	int shots_per_minute;
+	
+	public Weapon(int max_ammo, int max_dirt, String ammo_type) {
+		this.dirt=0;
+		this.max_dirt=max_dirt;
+		this.max_ammo_count=max_ammo;
+		this.ammo_count=0;
+		this.ammo_type=ammo_type;
+	}
+	
 
 	/**
 	 * максимальная вмстительность магазина
