@@ -21,7 +21,7 @@ public class Main {
 	}
 
 	// 3
-	static String[] fillArray(String[] all_variants,  int count) {
+	static String[] fillArray(String[] all_variants, int count) {
 		String[] target = new String[count];
 		for (int i = 0; i < count; i++) {
 			boolean has_repeat = false;
@@ -29,7 +29,7 @@ public class Main {
 				int ind = (int) (Math.random() * all_variants.length);
 				String elem = all_variants[ind];
 				has_repeat = Arrays.asList(target).indexOf(elem) != -1;
-				target[i]=elem;
+				target[i] = elem;
 			} while (has_repeat);
 
 		}
@@ -37,8 +37,8 @@ public class Main {
 	}
 
 	// 4
-	static int[][] fillMatrix( int min, int max) {
-		int[][]matrix = new int[names_size][states_size];
+	static int[][] fillMatrix(int min, int max) {
+		int[][] matrix = new int[names_size][states_size];
 
 		for (int i = 0; i < names_size; i++) {
 			for (int j = 0; j < states_size; j++) {
@@ -119,10 +119,10 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		states=fillArray(all_states,  5);
+		states = fillArray(all_states, 5);
 		System.out.println("Выбранные дейсвтия");
 		printArray(states);
-		matrix = fillMatrix( 0, 3);
+		matrix = fillMatrix(0, 3);
 		System.out.println("Матрица");
 		printMatrix(matrix);
 		sortFirstRow(matrix);
