@@ -6,15 +6,13 @@
  */
 public class Weapon {
 
-	
 	public Weapon(int max_ammo, int max_dirt, String ammo_type) {
-		this.dirt=0;
-		this.max_dirt=max_dirt;
-		this.max_ammo_count=max_ammo;
-		this.ammo_count=0;
-		this.ammo_type=ammo_type;
+		this.dirt = 0;
+		this.max_dirt = max_dirt;
+		this.max_ammo_count = max_ammo;
+		this.ammo_count = 0;
+		this.ammo_type = ammo_type;
 	}
-	
 
 	/**
 	 * максимальная вмстительность магазина
@@ -82,7 +80,7 @@ public class Weapon {
 		if (ammo_type == this.ammo_type) {
 			this.ammo_count = this.max_ammo_count;
 		} else {
-			System.out.println("Не правильные патроны");
+			System.out.println("Неправильные патроны");
 		}
 	}
 }
