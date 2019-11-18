@@ -50,7 +50,7 @@ public class MyWindow extends JFrame {
 	        text1.setWrapStyleWord(true);
 		
 		JLabel text2 = new JLabel("Text2");
-		text2.setLocation(w/2, 40);
+		text2.setLocation(w/2, 0);
 		text2.setSize(140, 20);
 		
 		JLabel text3 = new JLabel("Text3");
