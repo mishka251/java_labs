@@ -1,8 +1,8 @@
 
 /**
- * enum для типа стрельбы
+ * enum С‚РёРї СЃС‚СЂРµР»СЊР±С‹
  * 
- * @author Михаил
+ * @author ГЊГЁГµГ ГЁГ«
  *
  */
 enum ShotType {
@@ -10,19 +10,19 @@ enum ShotType {
 };
 
 /**
- * Автомат
+ * Р°РІС‚РѕРјР°С‚
  * 
- * @author Михаил
+ * @author ГЊГЁГµГ ГЁГ«
  *
  */
 public class AutomaticRifle extends Weapon {
 	/**
-	 * тип стрельбы этого автомата
+	 * С‚РёРї СЃС‚СЂРµР»СЊР±С‹
 	 */
 	ShotType shotType;
 
 	/**
-	 * есть ли прицел
+	 * РµСЃС‚СЊ Р»Рё РїСЂРёС†РµР»
 	 */
 	public boolean has_scope;
 
@@ -37,46 +37,46 @@ public class AutomaticRifle extends Weapon {
 	}
 
 	/**
-	 * Выстрел
+	 * РІС‹СЃС‚СЂРµР»
 	 */
 	public void shot() {
 		if (this.dirt == this.max_dirt) {
-			System.out.println("Оружие грязное, нельзя стрелять");
+			System.out.println("РћСЂСѓР¶РёРµ РіСЂСЏР·РЅРѕРµ, РЅР°РґРѕ С‡РёСЃС‚РёС‚СЊ");
 		} else {
 
 			switch (this.shotType) {
 			case ONE:
 				if (this.ammo_count > 0) {
-					System.out.println("пиу");
+					System.out.println("РїРёСѓ");
 					this.ammo_count--;
 				} else {
-					System.out.println("Кончились патроны");
+					System.out.println("РЅРµС‚ РїР°С‚СЂРѕРЅРѕРІ");
 				}
 				break;
 
 			case THREE:
 				if (this.ammo_count > 3) {
 					for (int i = 0; i < 3; i++) {
-						System.out.print("пиу");
+						System.out.print("РїРёСѓ");
 						this.ammo_count--;
 					}
 					System.out.println();
 
 				} else {
 					for (int i = 0; i < this.ammo_count; i++) {
-						System.out.print("пиу");
+						System.out.print("РїРёСѓ");
 						this.ammo_count--;
 					}
-					System.out.println("Кончились патроны");
+					System.out.println("РЅРµС‚ РїР°С‚СЂРѕРЅРѕРІ");
 				}
 				break;
 
 			case AUTO:
 				while (this.ammo_count > 0) {
-					System.out.println("пиу");
+					System.out.println("РїРёСѓ");
 					this.ammo_count--;
 				}
-				System.out.println("Кончились патроны");
+				System.out.println("РЅРµС‚ РїР°С‚СЂРѕРЅРѕРІ");
 
 				break;
 			}

@@ -1,7 +1,7 @@
 /**
- * Пистолет
+ * РїРёСЃС‚РѕР»РµС‚
  * 
- * @author Михаил
+ * @author ГЊГЁГµГ ГЁГ«
  *
  */
 public class Gun extends Weapon {
@@ -13,12 +13,12 @@ public class Gun extends Weapon {
 	}
 
 	/**
-	 * Есть глушитель
+	 * РµСЃС‚СЊ Р»Рё РіР»СѓС€РёС‚РµР»СЊ
 	 */
 	boolean has_silencer;
 
 	/**
-	 * есть ли лазерный целеуказатель
+	 * РµСЃС‚СЊ Р»Рё Р»С†Сѓ
 	 */
 	public boolean has_laser;
 
@@ -31,23 +31,23 @@ public class Gun extends Weapon {
 	}
 
 	/**
-	 * Выстрел
+	 * РІС‹СЃС‚СЂРµР»
 	 */
 	public void shot() {
 		if (this.dirt == this.max_dirt) {
-			System.out.println("Оружие грязное, нельзя стрелять");
+			System.out.println("РѕСЂСѓР¶РёРµ РіСЂСЏР·РЅРѕРµ");
 		} else {
 			if (this.can_shot()) {
 				if (this.has_silencer) {
-					System.out.println("пик");
+					System.out.println("РїРёРє");
 				} else {
-					System.out.println("пиу");
+					System.out.println("РїРёСѓ");
 				}
 
 				this.ammo_count--;
 				this.dirt++;
 			} else {
-				System.out.println("Кончились патроны");
+				System.out.println("РЅРµС‚ РїР°С‚СЂРѕРЅРѕРІ");
 			}
 		}
 	}

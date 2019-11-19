@@ -1,18 +1,18 @@
 
 /**
- * Пулемет
+ * РїСѓР»РµРјРµС‚
  * 
- * @author Михаил
+ * @author ГЊГЁГµГ ГЁГ«
  *
  */
 public class MachineGun extends Weapon {
 	/**
-	 * max перегрева
+	 * max РїРµСЂРµРіСЂРµРІ
 	 */
 	int max_overheat;
 
 	/**
-	 * текущий перегрев
+	 * С‚РµРєСѓС‰РёР№ РїРµСЂРµРіСЂРµРІ
 	 */
 	int overheat;
 
@@ -23,19 +23,19 @@ public class MachineGun extends Weapon {
 	}
 
 	/**
-	 * Охлаждение
+	 * РѕС…Р»Р°РґРёС‚СЊ
 	 */
 	public void cold() {
 		this.overheat = 0;
 	}
 
 	/**
-	 * Выстрел
+	 * СЃС‚СЂРµР»СЊР±Р°
 	 */
 	public void shot() {
 
 		while (this.can_shot()) {
-			System.out.print("пиу");
+			System.out.print("РїРёСѓ");
 			this.ammo_count--;
 			this.overheat++;
 			this.dirt++;
@@ -43,17 +43,17 @@ public class MachineGun extends Weapon {
 
 		System.out.println();
 		if (this.dirt == this.max_dirt) {
-			System.out.println("Оружие грязное, нельзя стрелять");
+			System.out.println("РѕСЂСѓР¶РёРµ РіСЂСЏР·РЅРѕРµ");
 		} else if (this.overheat == this.max_overheat) {
-			System.out.println("Пулемет перегрелся");
+			System.out.println("РїРµСЂРµРіСЂРµР»СЃСЏ");
 		} else {
-			System.out.println("Кончились патроны");
+			System.out.println("РЅРµС‚ РїР°С‚СЂРѕРЅРѕРІ");
 		}
 
 	}
 
 	/*
-	 * Можно ли стрелять
+	 * РјРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
 	 */
 	public boolean can_shot() {
 		return super.can_shot() && this.overheat < this.max_overheat;

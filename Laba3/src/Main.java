@@ -52,7 +52,7 @@ public class Main {
 				sum += matrix[i][j];
 			}
 		}
-		System.out.println("Сумма всех элементов = " + sum);
+		System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°С‚СЂРёС† = " + sum);
 		return matrix;
 	}
 
@@ -67,7 +67,7 @@ public class Main {
 				}
 			}
 		}
-		System.out.println("Отсортированный ряд");
+		System.out.println("РџРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё");
 		for (int i = 0; i < matrix[0].length; i++) {
 			System.out.print(matrix[0][i] + " ");
 		}
@@ -83,7 +83,7 @@ public class Main {
 				copy[i][j] = matrix[i][j];
 			}
 		}
-		System.out.println("Первый столбец");
+		System.out.println("РџРµСЂРІС‹Р№ СЃС‚РѕР»Р±РµС†");
 		for (int i = 0; i < matrix.length; i++) {
 			System.out.println(matrix[i][0]);
 		}
@@ -99,7 +99,7 @@ public class Main {
 		for (int i = 0; i < matrix[name_ind].length; i++) {
 			count += matrix[name_ind][i];
 		}
-		System.out.println(name + " выполнил " + count + " действий");
+		System.out.println(name + " РІС‹РїРѕР»РЅРёР» " + count + " РґРµР№СЃС‚РІРёР№");
 	}
 
 	static void printMatrix(int[][] matrix) {
@@ -120,16 +120,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		states = fillArray(all_states, 5);
-		System.out.println("Выбранные дейсвтия");
+		System.out.println("СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ");
 		printArray(states);
 		matrix = fillMatrix(0, 3);
-		System.out.println("Матрица");
+		System.out.println("РњР°С‚СЂРёС†Р°");
 		printMatrix(matrix);
 		sortFirstRow(matrix);
-		System.out.println("Матрица после сортировки");
+		System.out.println("РјР°С‚СЂРёС†Р° РїРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё");
 		printMatrix(matrix);
 		int[][] copy = copyFirstRow(matrix);
-		System.out.println("Копия");
+		System.out.println("РєРѕРїРёСЏ");
 		printMatrix(copy);
 		actionsCount();
 	}
